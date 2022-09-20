@@ -1,6 +1,6 @@
 <?php
    	session_start();
-       
+       //check if user really exists incase of session hijacking . Validate session always and destroy when need be
        $now = time();
        if (!isset($_SESSION['username'])) {
            header('location:/');
@@ -16,28 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Anonymous Ecorp</title>
-    <meta name="desciption" content="Anonymous Ecorp. Share Anonymously across the world. Fast, Simple, Secure and uses latest technology  ensuring you leave no digital footprints. Just like you were never here!!">
-    <link rel="icon" type="image/x-icon" href="alogo.png">
-    <meta name="description" content="Anonymous Share">
-    <meta property="og:image"  content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-    <meta property="og:description" content="Share secret messages with friends,lovers or associates globally">
-    <meta property="og:url"content="https://anonymous.astralecorp.com" >
-    <meta property="og:title" content="Anonymous Share">
-    <meta name="twitter:site" content="@astralecorp" >
-    <meta name="twitter:description" content="Anonymous Share" >
-    <meta name="twitter:title" content="Anonymous Ecorp" >
-    <meta name="twitter:creator" content="@astralecorp" >
-    <meta name="twitter:url" content="https://anonymous.astralecorp.com" >
-    <meta name="twitter:image" content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg" >
-    <meta name="theme-color" content="#9900cc" >
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://res.cloudinary.com/dyadjj49h/raw/upload/v1661183700/accsAnonymous22Aug_uf3uth.css">
+    <!--import jquery and styling wiht all header meta tags here-->
 </head>
 <body>
 <div id="form3a">
@@ -50,17 +29,12 @@
     <a href=""><button id="b10" style="font-size:24px" onclick=location.reload()>Refresh Messages <i class="fa fa-download" style="color:red;"></i></i></button><br></a>
     <p>
         <?php
-           $conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_anonecorp") ;
+           $conn=mysqli_connect("localhost","username","password","database") ;
            if (!$conn) {
              die("Connection failed: " . mysqli_connect_error());
             }else{
-            $query1= mysqli_query($conn,"SELECT*from $newta");
-            $query2 =  mysqli_query($conn, "SELECT anonmsg FROM $newta WHERE anonmsg IS NULL or anonmsg = ''");
-            if ($query2 == TRUE){
-            while($row=mysqli_fetch_array($query1)){
-            $sms =  $row['anonmsg'];
-            $time = $row['anontime'];
-           
+           //if connects to database,fetch messages here
+              
             ?>
             
             <div id="response2" >
