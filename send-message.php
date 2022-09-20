@@ -1,9 +1,5 @@
 <?php
-//$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-//echo $actual_link;
-//$link_array = explode('/',$actual_link);
-//echo end($link_array);
-$conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_anonecorp") ;
+//handle the link format here and use get parameters
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,26 +7,7 @@ $conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_ano
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Anonymous Ecorp</title>
-    <meta name="desciption" content="Anonymous Ecorp. Share Anonymously across the world. Fast, Simple, Secure and uses latest technology  ensuring you leave no digital footprints. Just like you were never here!!">
-    <link rel="icon" type="image/x-icon" href="alogo.png">
-    <meta name="description" content="Anonymous Share">
-    <meta property="og:image"  content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-    <meta property="og:description" content="Share secret messages with friends,lovers or associates globally">
-    <meta property="og:url"content="https://anonymous.astralecorp.com" >
-    <meta property="og:title" content="Anonymous Share">
-    <meta name="twitter:site" content="@astralecorp" >
-    <meta name="twitter:description" content="Anonymous Share" >
-    <meta name="twitter:title" content="Anonymous Ecorp" >
-    <meta name="twitter:creator" content="@astralecorp" >
-    <meta name="twitter:url" content="https://anonymous.astralecorp.com" >
-    <meta name="twitter:image" content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661000623/g2_v1fu4s.pngg" >
-    <meta name="theme-color" content="#9900cc" >
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://res.cloudinary.com/dyadjj49h/raw/upload/v1661183700/accsAnonymous22Aug_uf3uth.css">
+
 </head>
 <body>
 <div id="rowzy">
@@ -74,21 +51,7 @@ $conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_ano
     <?php
      if($_GET['user'])
      {
-     $conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_anonecorp") ;
-     //using php to get part of the url below since we used htaccess to edit the url:
-         $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        //echo $actual_link;
-        $link_array = explode('/',$actual_link);
-        //echo end($link_array);
-        //end php for url last part getting
-        $fget = end($link_array);
-    // $fget = $_GET['user'];
-     $getsanitize = mysqli_real_escape_string($conn,$fget);
-     $vname =  $getsanitize;
-     $query = mysqli_query($conn, "SELECT * FROM `anonusers` WHERE `anonname`='$vname'");
-     
-     if (mysqli_num_rows($query) > 0) {
-      //echo $vname
+   //do something here with the get from url
      ?>
     <h1 style="color:whitesmoke;">Say Something</h1>
     <h2>To <?php echo"$vname"?>.</h2>
@@ -101,22 +64,7 @@ $conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_ano
                 <!--amtd-->
                 <?php
                     if (!empty($_POST['smsg']) && isset($_POST['user'])){
-                                    $user = $_POST['user'];
-                                    $messsage = $_POST['smsg'];
-                                    $conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_anonecorp") ;
-                                    $messages = mysqli_real_escape_string($conn,$messsage);
-                                    $messagesi=  mb_strimwidth($messages, 0, 255);
-
-                                if(!$conn){
-                                    echo("Failed..an error occured. Try again in a few");
-                                }else{
-                                    $sql = "INSERT INTO $user (anonmsg) VALUES ('$messagesi')";
-                                 }  if(mysqli_query($conn, $sql)){
-                                    echo"Anonymous Message sent";
-                                 }
-                                }else{
-                                    //echo"Missing message";
-                                }
+                                   //on button click,insert message to recivers table in database
                                 ?>
        </div>
        <a href=""><button id="b11" type="submit" value="Submit"  style="font-size:24px">Send Message<i class="fa fa-send" style="color:red"></i></button><br></a>
