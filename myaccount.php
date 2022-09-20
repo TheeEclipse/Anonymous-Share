@@ -7,32 +7,7 @@
            exit();
            
        }else{
-           $newta = $_SESSION['username']; 
-            //PICKING IP ADDRESS OF LOGIN:
-	// if user from the share internet
-	if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
-	     $lipaddr = $_SERVER['HTTP_CLIENT_IP'];
-	    //echo 'IP address = '.$_SERVER['HTTP_CLIENT_IP'];
-		//echo "IP Address of client " . getenv("REMOTE_ADDR");
-	}
-	//if user is from the proxy
-	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-		//echo 'IP address of proxy = '.$_SERVER['HTTP_X_FORWARDED_FOR'];
-		$lipaddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
-	}
-	//if user is from the remote address
-	else{
-	    //echo 'IP address remote = '.$_SERVER['REMOTE_ADDR'];
-		$lipaddr = $_SERVER['REMOTE_ADDR'];
-	}
-	//echo  $lipaddr;
-    $device = $_SERVER['HTTP_USER_AGENT'];
-
-	$conn=mysqli_connect("localhost","astralec_eclipse","MsFCZr*UoP-I","astralec_anonecorp") ;
-	 $sql = "UPDATE `anonusers` SET `ipaddr`= '$lipaddr',`deviceid`='$device' WHERE `anonname` = '$newta' ";
-       if(mysqli_query($conn, $sql)){
-          // echo"success";
-       } 
+         //validate session for security
     
 } 
 ?>
@@ -42,26 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Anonymous Ecorp</title>
-    <meta name="desciption" content="Anonymous Ecorp. Share Anonymously across the world. Fast, Simple, Secure and uses latest technology  ensuring you leave no digital footprints. Just like you were never here!!">
-    <link rel="icon" type="image/x-icon" href="alogo.png">
-    <meta name="description" content="Anonymous Share">
-    <meta property="og:image"  content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-    <meta property="og:description" content="Share secret messages with friends,lovers or associates globally">
-    <meta property="og:url"content="https://anonymous.astralecorp.com" >
-    <meta property="og:title" content="Anonymous Share">
-    <meta name="twitter:site" content="@astralecorp" >
-    <meta name="twitter:description" content="Anonymous Share" >
-    <meta name="twitter:title" content="Anonymous Ecorp" >
-    <meta name="twitter:creator" content="@astralecorp" >
-    <meta name="twitter:url" content="https://anonymous.astralecorp.com" >
-    <meta name="twitter:image" content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661000623/g2_v1fu4s.pngg" >
-    <meta name="theme-color" content="#9900cc" >
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://res.cloudinary.com/dyadjj49h/raw/upload/v1661183700/accsAnonymous22Aug_uf3uth.css">
+   <!--do your own header tags but import jquery and bootstrap-->
 </head>
 <body>
 <div id="rowzy">
