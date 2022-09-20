@@ -3,27 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Anonymous Ecorp</title>
-    <meta name="desciption" content="Anonymous Ecorp. Share Anonymously across the world. Fast, Simple, Secure and uses latest technology  ensuring you leave no digital footprints. Just like you were never here!!">
-    <link rel="icon" type="image/x-icon" href="alogo.png">
-    <meta name="description" content="Anonymous Share">
-    <meta property="og:image"  content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-    <meta property="og:description" content="Share secret messages with friends,lovers or associates globally">
-    <meta property="og:url"content="https://anonymous.astralecorp.com" >
-    <meta property="og:title" content="Anonymous Share">
-    <meta name="twitter:site" content="@astralecorp" >
-    <meta name="twitter:description" content="Anonymous Share" >
-    <meta name="twitter:title" content="Anonymous Ecorp" >
-    <meta name="twitter:creator" content="@astralecorp" >
-    <meta name="twitter:url" content="https://anonymous.astralecorp.com" >
-    <meta name="twitter:image" content="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg" >
-    <meta name="theme-color" content="#9900cc" >
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://res.cloudinary.com/dyadjj49h/raw/upload/v1661009493/style_xdo0ms.css">
+    <title>Anonymous Share</title>
+   <!---Add all header tags here(styles and all), <some are unavailable as they are pricate assets>--->
 </head>
 <body>
 <div id="rowzy">
@@ -36,6 +17,7 @@
         <div id="myDropdownzi" class="dropdownzi-content">
           <a href="https://anonymous.astralecorp.com">Home</a>
           <a href=""  class="share-button">Share</a>
+ <--jquery below for sharing prompt--->
           <script>
             const shareButton = document.querySelector('.share-button');
 shareButton.addEventListener('click', event => {
@@ -68,7 +50,7 @@ closeButton.addEventListener('click', event => {
                   <a href="register" style="text-decoration:none;"><button type="button" class="btn btn-danger" id="btnzi">Get Started</button></a>
                 </div>
                 <div class="columnzi" id="lf">
-                  <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg" alt="" width="70%" height="70%">
+                  <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halljs.svg" alt="" width="70%" height="70%">
                 </div>
           </div>
 </div>
@@ -100,19 +82,19 @@ closeButton.addEventListener('click', event => {
    <div class="rowzi1">
         <div class="columnzi1">
           <h2 style="text-align:center;">Secure</h2><br>
-           <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661000622/sec_kzzdsl.svg" alt="" width="150px" height="150px">  
+           <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v166ec_kzzdsl.svg" alt="" width="150px" height="150px">  
         </div>
         <div class="columnzi1"> 
         <h2 style="text-align: center;">Global</h2>
-        <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661000825/global-svgrepo-com_lfjaax.svg" alt="" width="150px" height="150px">
+        <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v16610/global-svgrepo-com_lfjaax.svg" alt="" width="150px" height="150px">
         </div>
         <div class="columnzi1"> 
         <h2 style="text-align: center;">New Tech</h2>
-        <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1659276311/about-img_dsd7om.svg" alt="" width="150px" height="150px">
+        <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1311/about-img_dsd7om.svg" alt="" width="150px" height="150px">
         </div>
         <div class="columnzi1"> 
         <h2 style="text-align: center;">Efficient</h2>
-        <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661000907/efficiency-svgrepo-com_juvxgo.svg" alt="" width="150px" height="150px">
+        <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v166107/efficiency-svgrepo-com_juvxgo.svg" alt="" width="150px" height="150px">
         </div>
    </div>
 </div>
