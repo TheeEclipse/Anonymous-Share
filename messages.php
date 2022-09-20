@@ -21,7 +21,7 @@
 <body>
 <div id="form3a">
   <div class="container">
-    <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halloween02_jgqtjs.svg">
+    <img src="https://res.cloudinary.com/dyadjj49h/image/upload/v1661071203/halgqtjs.svg">
     <h1 style="color:hwitesmoke;">Anonymous Share</h1>
     <h2><?php echo $newta?>'s Profile</h2>
     <p>&#10084;&#65039;Share Your Profile to get anonymous messages from friends and secret lovers.</p>
